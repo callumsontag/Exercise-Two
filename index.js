@@ -7,7 +7,7 @@ fs.readFile("data.json", "utf8", (err, data) => {
 
   let html = "\n";
   jsonData.forEach((item) => {
-    html += `<div>\n<hr>\n <img src="${item.artwork}">\n Title: ${item.title}\n Artist: ${item.artist}\n <audio controls><source src="${item.url}" type="audio/mpeg"></audio>\n</hr>\n</div>\n\n`;
+    html += `<div>\n<hr>\n <img src="${item.artwork}">\n Title: ${item.title}\n Artist: ${item.artist}\n <audio controls><source src="${item.url}" type="audio/mpeg"></audio>\n\n</div>\n\n`;
   });
 
   fs.writeFile("output.html", html, (err) => {
